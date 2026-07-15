@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 
     <title>Servicios de Limpieza</title>
 
@@ -269,40 +271,30 @@
 
         <div class="formulario-contacto">
 
-            <form id="formContacto" action="enviar.php" method="POST">
+<form id="formContacto">
 
-                <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Nombre completo"
-                    required
-                >
+    <input id="nombre" type="text" name="nombre" placeholder="Nombre completo">
 
-                <input
-                    type="email"
-                    name="correo"
-                    placeholder="Correo electrónico"
-                    required
-                >
+    <input id="correo" type="email" name="correo" placeholder="Correo electrónico">
 
-                <input
-                    type="tel"
-                    name="telefono"
-                    placeholder="Teléfono"
-                >
+    <input id="telefono" type="tel" name="telefono" placeholder="Teléfono">
 
-                <textarea
-                    name="mensaje"
-                    rows="6"
-                    placeholder="Escribe tu mensaje..."
-                    required
-                ></textarea>
+    <textarea id="mensaje" name="mensaje"></textarea>
 
-                <button type="submit">
-                    Enviar Mensaje
-                </button>
+    <div class="botones-contacto">
 
-            </form>
+        <button type="button" id="btnCesar">
+            Enviar a César
+        </button>
+
+        <button type="button" id="btnIngrid">
+            Enviar a Ingrid
+        </button>
+
+    </div>
+
+</form>
+
 
         </div>
 

@@ -296,3 +296,73 @@ MÓVILES PEQUEÑOS
 }
 
 }
+
+/* PC */
+
+.controles-trabajos{
+
+    display:none;
+
+}
+
+/* Móvil */
+
+@media(max-width:768px){
+
+.galeria-trabajos{
+
+    display:flex;
+
+    overflow-x:hidden;
+
+    scroll-behavior:smooth;
+
+}
+
+.trabajo{
+
+    min-width:100%;
+
+    flex:0 0 100%;
+
+}
+
+.controles-trabajos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+.controles-trabajos button{
+
+    border:none;
+
+    background:#0b5ed7;
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.controles-trabajos button:hover{
+
+    background:#084298;
+
+}
+
+}

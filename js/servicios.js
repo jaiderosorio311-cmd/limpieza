@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 
-
+//responsive de las cajas de servicios 
 const contenedor = document.querySelector(".grid-servicios");
 
 const btnAnterior = document.getElementById("anteriorServicio");

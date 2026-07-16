@@ -46,3 +46,23 @@ BOTÓN FLOTANTE WHATSAPP
 }
 
 }
+
+@media (max-width:768px){
+
+.servicios,
+.trabajos,
+.ubicacion,
+.contacto{
+
+    padding:55px 15px;
+
+}
+
+.titulo-servicios,
+.titulo-trabajos{
+
+    margin-bottom:35px;
+
+}
+
+}

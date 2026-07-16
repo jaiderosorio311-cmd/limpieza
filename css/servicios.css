@@ -1,165 +1,50 @@
+/*=========================================
+SERVICIOS
+=========================================*/
+
 .servicios{
-
     width:100%;
-
-    padding:90px 20px;
-
-    background:#f8fafc;
-
+    padding:70px 20px;
+     background:#eef5ff;
 }
 
 .contenedor-servicios{
-
     width:min(1300px,95%);
-
     margin:auto;
-
 }
 
+/*=========================================
+TÍTULO
+=========================================*/
+
 .titulo-servicios{
-
     text-align:center;
-
-    margin-bottom:60px;
-
+    margin-bottom:45px;
 }
 
 .titulo-servicios span{
-
-    color:#2196f3;
-
+    color:#9FD3FF;
     font-weight:700;
-
     letter-spacing:2px;
-
+    text-transform:uppercase;
 }
 
 .titulo-servicios h2{
-
     font-size:42px;
-
     margin:15px 0;
-
-    color:#1f2937;
-
+    color:#ffffff;
 }
 
 .titulo-servicios p{
-
     max-width:750px;
-
     margin:auto;
-
-    color:#6b7280;
-
+    color:#EAF4FF;
     line-height:1.8;
-
 }
 
-.grid-servicios{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
-
-}
-
-.card-servicio{
-
-    background:#fff;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    transition:.35s;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-}
-
-.card-servicio:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.imagen-servicio{
-
-    width:100%;
-
-    height:220px;
-
-    overflow:hidden;
-
-}
-
-.imagen-servicio img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s;
-
-}
-
-.card-servicio:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.contenido-servicio{
-
-    padding:25px;
-
-}
-
-.contenido-servicio h3{
-
-    color:#1f2937;
-
-    margin-bottom:15px;
-
-    font-size:22px;
-
-}
-
-.contenido-servicio p{
-
-    color:#6b7280;
-
-    line-height:1.7;
-
-}
-
-@media(max-width:768px){
-
-.titulo-servicios h2{
-
-font-size:32px;
-
-}
-
-.servicios{
-
-padding:70px 15px;
-
-}
-
-}
-/* responsive cajas de servicios  */
-
-/*==========================
-SERVICIOS
-===========================*/
+/*=========================================
+GRID
+=========================================*/
 
 .grid-servicios{
     display:grid;
@@ -167,69 +52,122 @@ SERVICIOS
     gap:25px;
 }
 
+/*=========================================
+TARJETAS
+=========================================*/
+
 .card-servicio{
-    background:#fff;
-    border-radius:15px;
+    background:#ffffff;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    transition:.35s;
+}
+
+.card-servicio:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.28);
+}
+
+/*=========================================
+IMAGEN
+=========================================*/
+
+.imagen-servicio{
+    width:100%;
+    height:230px;
+    overflow:hidden;
 }
 
 .imagen-servicio img{
     width:100%;
-    height:230px;
+    height:100%;
     object-fit:cover;
     display:block;
+    transition:.45s;
 }
 
-.contenido-servicio{
-    padding:20px;
+.card-servicio:hover img{
+    transform:scale(1.05);
 }
+
+/*=========================================
+CONTENIDO
+=========================================*/
+
+.contenido-servicio{
+    padding:22px;
+}
+
+.contenido-servicio h3{
+    color:#0B5ED7;
+    margin-bottom:12px;
+    font-size:22px;
+    font-weight:700;
+}
+
+.contenido-servicio p{
+    color:#5F6B7A;
+    line-height:1.7;
+}
+
+/*=========================================
+BOTONES RESPONSIVE
+=========================================*/
 
 .controles-servicios{
     display:none;
 }
 
-/*==========================
+/*=========================================
 TABLET
-===========================*/
+=========================================*/
 
 @media(max-width:991px){
+
+.servicios{
+    padding:60px 20px;
+}
 
 .grid-servicios{
     grid-template-columns:repeat(2,1fr);
 }
-.servicios{
-    padding:70px 0 50px;
+
+.titulo-servicios h2{
+    font-size:36px;
 }
 
-.trabajos{
-    padding:50px 0 80px;
-}
 }
 
-
-/*==========================
-MOVIL
-===========================*/
+/*=========================================
+MÓVIL
+=========================================*/
 
 @media(max-width:768px){
+
 .servicios{
-    padding:70px 0 50px;
+    padding:55px 15px;
 }
 
-.trabajos{
-    padding:10px 0 80px;
+.titulo-servicios{
+    margin-bottom:35px;
 }
+
+.titulo-servicios h2{
+    font-size:30px;
+}
+
+.titulo-servicios p{
+    font-size:15px;
+}
+
 .grid-servicios{
 
     display:flex;
     overflow-x:auto;
-
     scroll-behavior:smooth;
     scroll-snap-type:x mandatory;
-
     gap:20px;
-
     scrollbar-width:none;
 
 }
@@ -239,17 +177,13 @@ MOVIL
 }
 
 .card-servicio{
-
     min-width:100%;
     flex:0 0 100%;
     scroll-snap-align:center;
-
 }
 
-.imagen-servicio img{
-
+.imagen-servicio{
     height:240px;
-
 }
 
 .controles-servicios{
@@ -257,27 +191,51 @@ MOVIL
     display:flex;
     justify-content:center;
     gap:15px;
-    margin-top:25px;
+    margin-top:30px;
 
 }
 
 .controles-servicios button{
 
     border:none;
-    background:#0c5adb;
-    color:#fff;
-    padding:12px 22px;
+    background:#ffffff;
+    color:#0B5ED7;
+    padding:12px 24px;
     border-radius:8px;
+    font-weight:bold;
     cursor:pointer;
-    font-size:15px;
     transition:.3s;
 
 }
 
 .controles-servicios button:hover{
 
-    background:#0847ad;
+    background:#EAF4FF;
 
+}
+
+}
+
+/*=========================================
+MÓVILES PEQUEÑOS
+=========================================*/
+
+@media(max-width:480px){
+
+.titulo-servicios h2{
+    font-size:26px;
+}
+
+.imagen-servicio{
+    height:210px;
+}
+
+.contenido-servicio h3{
+    font-size:20px;
+}
+
+.contenido-servicio p{
+    font-size:14px;
 }
 
 }

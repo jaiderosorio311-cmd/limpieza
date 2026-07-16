@@ -3,11 +3,9 @@ TRABAJOS
 =====================================*/
 
 .trabajos{
-
     width:100%;
-    padding:90px 20px;
+    padding:70px 20px;
     background:#f5f7fa;
-
 }
 
 .contenedor-trabajos{
@@ -22,10 +20,7 @@ TÍTULO
 =====================================*/
 
 .titulo-trabajos{
-
-    text-align:center;
-    margin-bottom:60px;
-
+    margin-bottom:45px;
 }
 
 .titulo-trabajos span{

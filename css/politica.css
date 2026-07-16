@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f5f7fa;
+
+    color:#333;
+
+    line-height:1.7;
+
+}
+
+.politica{
+
+    padding:70px 20px;
+
+}
+
+.contenedor{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#0b5ed7;
+
+    margin-bottom:15px;
+
+    font-size:40px;
+
+}
+
+.fecha{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:45px;
+
+}
+
+.bloque{
+
+    margin-bottom:35px;
+
+}
+
+.bloque h2{
+
+    color:#0b5ed7;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.bloque p{
+
+    margin-bottom:15px;
+
+}
+
+.bloque ul{
+
+    padding-left:25px;
+
+}
+
+.bloque li{
+
+    margin-bottom:10px;
+
+}
+
+.btn-volver{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    background:#0b5ed7;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.btn-volver:hover{
+
+    background:#084298;
+
+}
+
+@media(max-width:768px){
+
+.contenedor{
+
+    padding:30px 20px;
+
+}
+
+h1{
+
+    font-size:30px;
+
+}
+
+.bloque h2{
+
+    font-size:22px;
+
+}
+
+.btn-volver{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+}

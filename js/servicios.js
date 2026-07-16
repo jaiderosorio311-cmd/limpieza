@@ -19,3 +19,32 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
 
 });
+
+
+
+const contenedor = document.querySelector(".grid-servicios");
+
+const btnAnterior = document.getElementById("anteriorServicio");
+const btnSiguiente = document.getElementById("siguienteServicio");
+
+btnSiguiente.addEventListener("click", () => {
+
+    const ancho = contenedor.querySelector(".card-servicio").offsetWidth + 20;
+
+    contenedor.scrollBy({
+        left: ancho,
+        behavior: "smooth"
+    });
+
+});
+
+btnAnterior.addEventListener("click", () => {
+
+    const ancho = contenedor.querySelector(".card-servicio").offsetWidth + 20;
+
+    contenedor.scrollBy({
+        left: -ancho,
+        behavior: "smooth"
+    });
+
+});

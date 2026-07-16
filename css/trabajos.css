@@ -4,15 +4,14 @@ TRABAJOS
 
 .trabajos{
     width:100%;
-    padding:70px 20px;
-    background:#f5f7fa;
+    padding:60px 20px 70px;
+    background:#ffffff;
 }
 
 .contenedor-trabajos{
-
-    max-width:1300px;
+    max-width:1200px;
+    width:100%;
     margin:auto;
-
 }
 
 /*====================================
@@ -20,36 +19,34 @@ TÍTULO
 =====================================*/
 
 .titulo-trabajos{
+    text-align:center;
     margin-bottom:45px;
 }
 
 .titulo-trabajos span{
-
     display:block;
     color:#0b5ed7;
     font-size:15px;
     font-weight:700;
     letter-spacing:2px;
-    margin-bottom:10px;
-
+    margin-bottom:12px;
+    text-transform:uppercase;
 }
 
 .titulo-trabajos h2{
-
-    font-size:42px;
-    color:#222;
-    margin-bottom:20px;
-
+    max-width:850px;
+    margin:auto;
+    font-size:44px;
+    line-height:1.2;
+    color:#16324f;
 }
 
 .titulo-trabajos p{
-
-    max-width:750px;
-    margin:auto;
-    color:#666;
+    max-width:700px;
+    margin:20px auto 0;
+    color:#667085;
+    font-size:18px;
     line-height:1.8;
-    font-size:17px;
-
 }
 
 /*====================================
@@ -57,43 +54,26 @@ GALERÍA
 =====================================*/
 
 .galeria-trabajos{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+    gap:28px;
 }
 
 /*====================================
-TARJETA
+TARJETAS
 =====================================*/
 
 .trabajo{
-
     background:#fff;
-
     border-radius:18px;
-
     overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
     transition:.35s;
-
-    display:flex;
-
-    flex-direction:column;
-
 }
 
 .trabajo:hover{
-
     transform:translateY(-8px);
-
-    box-shadow:0 20px 35px rgba(0,0,0,.15);
-
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
 }
 
 /*====================================
@@ -101,23 +81,15 @@ IMAGEN
 =====================================*/
 
 .trabajo img{
-
     width:100%;
-
-    height:240px;
-
+    height:210px;
     object-fit:cover;
-
     display:block;
-
-    transition:.5s;
-
+    transition:.45s;
 }
 
 .trabajo:hover img{
-
     transform:scale(1.05);
-
 }
 
 /*====================================
@@ -125,137 +97,140 @@ INFORMACIÓN
 =====================================*/
 
 .info{
-
-    padding:25px;
-
-    flex:1;
-
+    padding:24px;
 }
 
 .info h3{
-
-    font-size:26px;
-
-    color:#222;
-
-    margin-bottom:15px;
-
+    font-size:24px;
+    color:#16324f;
+    margin-bottom:12px;
 }
 
 .info p{
-
     font-size:16px;
+    color:#667085;
+    line-height:1.7;
+}
 
-    color:#666;
+/*====================================
+BOTONES
+=====================================*/
 
-    line-height:1.8;
-
+.controles-trabajos{
+    display:none;
 }
 
 /*====================================
 TABLET
 =====================================*/
 
-@media(max-width:992px){
+@media(max-width:991px){
+
+.trabajos{
+    padding:55px 18px 60px;
+}
 
 .galeria-trabajos{
-
     grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
+    gap:22px;
 }
 
 .titulo-trabajos h2{
+    font-size:36px;
+}
 
-    font-size:34px;
-
+.titulo-trabajos p{
+    font-size:16px;
 }
 
 .trabajo img{
-
     height:220px;
-
 }
 
 .info h3{
-
     font-size:22px;
-
 }
 
 }
 
 /*====================================
-ANDROID / MÓVIL
+MÓVIL
 =====================================*/
 
 @media(max-width:768px){
 
 .trabajos{
-
-    padding:70px 15px;
-
+    padding:45px 15px 55px;
 }
 
 .titulo-trabajos{
+    margin-bottom:30px;
+}
 
-    margin-bottom:40px;
-
+.titulo-trabajos span{
+    font-size:14px;
 }
 
 .titulo-trabajos h2{
-
-    font-size:28px;
-
+    font-size:30px;
+    line-height:1.25;
 }
 
 .titulo-trabajos p{
-
     font-size:15px;
-
 }
 
 .galeria-trabajos{
-
-    grid-template-columns:1fr;
-
-    gap:20px;
-
+    display:flex;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
+    gap:18px;
 }
 
 .trabajo{
-
-    max-width:420px;
-
-    width:100%;
-
-    margin:auto;
-
+    min-width:100%;
+    flex:0 0 100%;
+    scroll-snap-align:center;
 }
 
 .trabajo img{
-
     height:220px;
-
 }
 
 .info{
-
-    padding:20px;
-
+    padding:22px;
 }
 
 .info h3{
-
-    font-size:21px;
-
+    font-size:22px;
 }
 
 .info p{
-
     font-size:15px;
+}
 
+.controles-trabajos{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.controles-trabajos button{
+    border:none;
+    background:#0b5ed7;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.controles-trabajos button:hover{
+    background:#084298;
 }
 
 }
@@ -266,98 +241,32 @@ MÓVILES PEQUEÑOS
 
 @media(max-width:480px){
 
-.trabajo img{
-
-    height:190px;
-
+.trabajos{
+    padding:40px 12px 50px;
 }
 
 .titulo-trabajos h2{
+    font-size:26px;
+}
 
-    font-size:24px;
+.titulo-trabajos p{
+    font-size:14px;
+}
 
+.trabajo img{
+    height:190px;
+}
+
+.info{
+    padding:18px;
 }
 
 .info h3{
-
-    font-size:19px;
-
+    font-size:20px;
 }
 
 .info p{
-
     font-size:14px;
-
-}
-
-}
-
-/* PC */
-
-.controles-trabajos{
-
-    display:none;
-
-}
-
-/* Móvil */
-
-@media(max-width:768px){
-
-.galeria-trabajos{
-
-    display:flex;
-
-    overflow-x:hidden;
-
-    scroll-behavior:smooth;
-
-}
-
-.trabajo{
-
-    min-width:100%;
-
-    flex:0 0 100%;
-
-}
-
-.controles-trabajos{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    margin-top:25px;
-
-}
-
-.controles-trabajos button{
-
-    border:none;
-
-    background:#0b5ed7;
-
-    color:#fff;
-
-    padding:12px 28px;
-
-    border-radius:8px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    transition:.3s;
-
-}
-
-.controles-trabajos button:hover{
-
-    background:#084298;
-
 }
 
 }

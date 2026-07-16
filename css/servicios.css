@@ -198,15 +198,28 @@ TABLET
 .grid-servicios{
     grid-template-columns:repeat(2,1fr);
 }
-
+.servicios{
+    padding:70px 0 50px;
 }
+
+.trabajos{
+    padding:50px 0 80px;
+}
+}
+
 
 /*==========================
 MOVIL
 ===========================*/
 
 @media(max-width:768px){
+.servicios{
+    padding:70px 0 50px;
+}
 
+.trabajos{
+    padding:10px 0 80px;
+}
 .grid-servicios{
 
     display:flex;

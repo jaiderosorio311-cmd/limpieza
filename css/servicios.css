@@ -23,22 +23,21 @@ TÍTULO
 }
 
 .titulo-servicios span{
-    color:#9FD3FF;
+    color:#0b5ed7;
     font-weight:700;
     letter-spacing:2px;
-    text-transform:uppercase;
 }
 
 .titulo-servicios h2{
     font-size:42px;
     margin:15px 0;
-    color:#ffffff;
+    color:#16324f;
 }
 
 .titulo-servicios p{
     max-width:750px;
     margin:auto;
-    color:#EAF4FF;
+    color:#5d6978;
     line-height:1.8;
 }
 
@@ -60,13 +59,13 @@ TARJETAS
     background:#ffffff;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
     transition:.35s;
 }
 
 .card-servicio:hover{
     transform:translateY(-8px);
-    box-shadow:0 18px 35px rgba(0,0,0,.28);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
 }
 
 /*=========================================
@@ -100,14 +99,13 @@ CONTENIDO
 }
 
 .contenido-servicio h3{
-    color:#0B5ED7;
+    color:#16324f;
     margin-bottom:12px;
     font-size:22px;
-    font-weight:700;
 }
 
 .contenido-servicio p{
-    color:#5F6B7A;
+    color:#667085;
     line-height:1.7;
 }
 
@@ -164,10 +162,15 @@ MÓVIL
 .grid-servicios{
 
     display:flex;
+
     overflow-x:auto;
+
     scroll-behavior:smooth;
+
     scroll-snap-type:x mandatory;
+
     gap:20px;
+
     scrollbar-width:none;
 
 }
@@ -177,20 +180,29 @@ MÓVIL
 }
 
 .card-servicio{
+
     min-width:100%;
+
     flex:0 0 100%;
+
     scroll-snap-align:center;
+
 }
 
 .imagen-servicio{
+
     height:240px;
+
 }
 
 .controles-servicios{
 
     display:flex;
+
     justify-content:center;
+
     gap:15px;
+
     margin-top:30px;
 
 }
@@ -198,19 +210,26 @@ MÓVIL
 .controles-servicios button{
 
     border:none;
-    background:#ffffff;
-    color:#0B5ED7;
-    padding:12px 24px;
+
+    background:#0b5ed7;
+
+    color:#fff;
+
+    padding:12px 22px;
+
     border-radius:8px;
-    font-weight:bold;
+
     cursor:pointer;
+
+    font-size:15px;
+
     transition:.3s;
 
 }
 
 .controles-servicios button:hover{
 
-    background:#EAF4FF;
+    background:#084298;
 
 }
 
@@ -228,6 +247,10 @@ MÓVILES PEQUEÑOS
 
 .imagen-servicio{
     height:210px;
+}
+
+.contenido-servicio{
+    padding:18px;
 }
 
 .contenido-servicio h3{

@@ -1,131 +1,439 @@
-.ubicacion{
+/*====================================
+INFORMACIÓN
+====================================*/
+
+.info{
     width:100%;
-    padding:70px 20px;
-     background:#eef5ff;
+    padding:80px 20px;
+    background:#f5f7fa;
 }
 
-.contenedor-ubicacion{
-
-    width:min(1300px,95%);
+.contenedor-info{
+    max-width:1100px;
     margin:auto;
+}
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-   gap:60px;
+.titulo-info{
+    text-align:center;
+    font-size:38px;
+    color:#3796e9;
+    margin-bottom:50px;
+    font-weight:700;
+}
+
+/*====================================
+ACORDEÓN
+====================================*/
+
+.acordeon{
+    margin-bottom:20px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.acordeon:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.acordeon-btn{
+
+    width:100%;
+    border:none;
+    outline:none;
+
+    background:#3095ed;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
     align-items:center;
 
-}
+    padding:22px 25px;
 
-.info-ubicacion span{
+    cursor:pointer;
 
-    color:#2196f3;
-    font-weight:bold;
-    letter-spacing:2px;
+    font-size:20px;
+    font-weight:700;
 
-}
-
-.info-ubicacion h2{
-
-    font-size:42px;
-    color:#1f2937;
-    margin:15px 0;
-
-}
-
-.info-ubicacion>p{
-
-    color:#666;
-    line-height:1.8;
-    margin-bottom:40px;
-
-}
-
-.datos-ubicacion{
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-
-}
-
-.item-ubicacion{
-
-    background:#f8fafc;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.05);
     transition:.3s;
 
 }
 
-.item-ubicacion:hover{
+.acordeon-btn:hover{
+    background:#0d65b1;
+}
 
-    transform:translateY(-5px);
+.acordeon-btn span{
+
+    font-size:30px;
+    font-weight:bold;
+
+    transition:.35s;
 
 }
 
-.item-ubicacion h3{
+.acordeon.active .acordeon-btn span{
 
-    margin-bottom:10px;
-    color:#1f2937;
+    transform:rotate(45deg);
 
 }
 
-.item-ubicacion p{
+/*====================================
+CONTENIDO
+====================================*/
 
+.acordeon-contenido{
+
+    max-height:0;
+    overflow:hidden;
+
+    background:#fff;
+
+    transition:max-height .45s ease;
+
+}
+
+.acordeon-contenido ul{
+
+    list-style:none;
+
+    padding:30px;
+
+}
+
+.acordeon-contenido li{
+
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+
+    margin-bottom:14px;
+
+}
+
+.acordeon-contenido li:last-child{
+    margin-bottom:0;
+}
+
+/*====================================
+UBICACIÓN
+====================================*/
+
+.ubicacion-info{
+
+    padding:30px;
+
+}
+
+.dato{
+
+    display:flex;
+    align-items:flex-start;
+
+    gap:20px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.dato:last-child{
+
+    border-bottom:none;
+
+}
+
+.icono{
+
+    width:50px;
+    min-width:50px;
+
+    font-size:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.dato h4{
+
+    font-size:20px;
+    color:#0b4f8a;
+
+    margin-bottom:8px;
+
+}
+
+.dato p{
+
+    font-size:17px;
     color:#666;
+
+    line-height:1.7;
+
+    margin:2px 0;
+
+}
+
+/*====================================
+TABLET
+====================================*/
+
+@media(max-width:992px){
+
+.info{
+
+    padding:70px 20px;
+
+}
+
+.titulo-info{
+
+    font-size:34px;
+
+}
+
+.acordeon-btn{
+
+    font-size:19px;
+
+}
+
+.acordeon-contenido ul{
+
+    padding:25px;
+
+}
+
+.ubicacion-info{
+
+    padding:25px;
+
+}
+
+}
+
+/*====================================
+MÓVIL
+====================================*/
+
+@media(max-width:768px){
+
+.info{
+
+    padding:60px 18px;
+
+}
+
+.titulo-info{
+
+    font-size:30px;
+
+    margin-bottom:40px;
+
+}
+
+.acordeon{
+
+    border-radius:10px;
+
+}
+
+.acordeon-btn{
+
+    font-size:18px;
+
+    padding:18px;
+
+}
+
+.acordeon-btn span{
+
+    font-size:28px;
+
+}
+
+.acordeon-contenido ul{
+
+    padding:22px;
+
+}
+
+.acordeon-contenido li{
+
+    font-size:16px;
+
+}
+
+.ubicacion-info{
+
+    padding:22px;
+
+}
+
+.dato{
+
+    gap:16px;
+
+    padding:16px 0;
+
+}
+
+.icono{
+
+    width:42px;
+    min-width:42px;
+
+    font-size:26px;
+
+}
+
+.dato h4{
+
+    font-size:18px;
+
+}
+
+.dato p{
+
+    font-size:16px;
+
+}
+
+}
+
+/*====================================
+MÓVIL PEQUEÑO
+====================================*/
+
+@media(max-width:480px){
+
+.info{
+
+    padding:50px 15px;
+
+}
+
+.titulo-info{
+
+    font-size:26px;
+
+}
+
+.acordeon-btn{
+
+    padding:16px;
+
+    font-size:16px;
+
+}
+
+.acordeon-btn span{
+
+    font-size:24px;
+
+}
+
+.acordeon-contenido ul{
+
+    padding:18px;
+
+}
+
+.acordeon-contenido li{
+
+    font-size:15px;
+    line-height:1.7;
+
+}
+
+.ubicacion-info{
+
+    padding:18px;
+
+}
+
+.dato{
+
+    gap:12px;
+
+    padding:15px 0;
+
+}
+
+.icono{
+
+    width:34px;
+    min-width:34px;
+
+    font-size:22px;
+
+}
+
+.dato h4{
+
+    font-size:17px;
+
+}
+
+.dato p{
+
+    font-size:15px;
     line-height:1.6;
 
 }
 
-.mapa{
+}
 
-    width:100%;
-    height:500px;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+/*====================================
+MÓVILES MUY PEQUEÑOS
+====================================*/
+
+@media(max-width:340px){
+
+.titulo-info{
+
+    font-size:23px;
 
 }
 
-.mapa iframe{
+.acordeon-btn{
 
-    width:100%;
-    height:100%;
-    border:0;
+    font-size:15px;
+    padding:15px;
 
 }
 
-@media(max-width:900px){
+.acordeon-btn span{
 
-    .contenedor-ubicacion{
+    font-size:22px;
 
-        grid-template-columns:1fr;
+}
 
-    }
+.icono{
 
-    .datos-ubicacion{
+    font-size:20px;
+    width:30px;
+    min-width:30px;
 
-        grid-template-columns:1fr;
+}
 
-    }
+.dato h4{
 
-    .info-ubicacion{
+    font-size:16px;
 
-        text-align:center;
+}
 
-    }
+.dato p{
 
-    .info-ubicacion h2{
+    font-size:14px;
 
-        font-size:34px;
-
-    }
-
-    .mapa{
-
-        height:350px;
-
-    }
+}
 
 }

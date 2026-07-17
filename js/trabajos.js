@@ -1,51 +1,50 @@
 const galeria = document.querySelector(".galeria-trabajos");
-const tarjetas = document.querySelectorAll(".trabajo");
 
 const siguiente = document.getElementById("siguienteTrabajo");
 const anterior = document.getElementById("anteriorTrabajo");
 
-let indice = 0;
+siguiente.addEventListener("click", () => {
 
-function mover(){
+    const ancho = galeria.querySelector(".trabajo").offsetWidth + 20;
 
-    galeria.scrollTo({
+    // Si está al final vuelve al inicio
+    if (galeria.scrollLeft + galeria.clientWidth >= galeria.scrollWidth - 5) {
 
-        left: tarjetas[indice].offsetLeft,
+        galeria.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        });
 
-        behavior:"smooth"
+    } else {
 
-    });
-
-}
-
-siguiente.addEventListener("click",()=>{
-
-    if(indice < tarjetas.length-1){
-
-        indice++;
-
-    }else{
-
-        indice = 0;
+        galeria.scrollBy({
+            left: ancho,
+            behavior: "smooth"
+        });
 
     }
-
-    mover();
 
 });
 
-anterior.addEventListener("click",()=>{
+anterior.addEventListener("click", () => {
 
-    if(indice > 0){
+    const ancho = galeria.querySelector(".trabajo").offsetWidth + 20;
 
-        indice--;
+    // Si está al inicio va al final
+    if (galeria.scrollLeft <= 0) {
 
-    }else{
+        galeria.scrollTo({
+            left: galeria.scrollWidth,
+            behavior: "smooth"
+        });
 
-        indice = tarjetas.length-1;
+    } else {
+
+        galeria.scrollBy({
+            left: -ancho,
+            behavior: "smooth"
+        });
 
     }
-
-    mover();
 
 });

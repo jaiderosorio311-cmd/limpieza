@@ -1,0 +1,169 @@
+/*====================================
+POR QUÉ ELEGIRNOS
+=====================================*/
+
+.porque-elegirnos{
+    width:100%;
+    padding:80px 20px;
+    background:#ffffff;
+}
+
+.contenedor-elegirnos{
+    max-width:1300px;
+    margin:auto;
+}
+
+/*====================================
+TÍTULO
+=====================================*/
+
+.titulo-elegirnos{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.titulo-elegirnos span{
+    display:block;
+    color:#0d6efd;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.titulo-elegirnos h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.titulo-elegirnos p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:30px;
+}
+
+/*====================================
+CARDS
+=====================================*/
+
+.cards-elegirnos{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+.card-elegirnos{
+
+    background:#fff;
+    padding:35px 30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.card-elegirnos:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.icono{
+
+    width:85px;
+    height:85px;
+    margin:auto;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    font-size:38px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:25px;
+
+}
+
+.card-elegirnos h3{
+
+    font-size:24px;
+    color:#222;
+    margin-bottom:15px;
+
+}
+
+.card-elegirnos p{
+
+    color:#666;
+    font-size:16px;
+    line-height:28px;
+
+}
+
+/*====================================
+TABLET
+=====================================*/
+
+@media(max-width:992px){
+
+.cards-elegirnos{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.titulo-elegirnos h2{
+
+font-size:34px;
+
+}
+
+}
+
+/*====================================
+MÓVIL
+=====================================*/
+
+@media(max-width:768px){
+
+.cards-elegirnos{
+
+grid-template-columns:1fr;
+
+}
+
+.titulo-elegirnos h2{
+
+font-size:30px;
+
+}
+
+.titulo-elegirnos p{
+
+font-size:16px;
+line-height:28px;
+
+}
+
+.card-elegirnos{
+
+padding:30px 25px;
+
+}
+
+.icono{
+
+width:75px;
+height:75px;
+font-size:34px;
+
+}
+
+}

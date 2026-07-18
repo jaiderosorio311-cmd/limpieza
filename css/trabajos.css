@@ -5,7 +5,7 @@ TRABAJOS
 
 .trabajos{
     width:100%;
-    padding:60px 20px 70px;
+    padding:70px 20px;
     background:#ffffff;
 }
 
@@ -18,43 +18,38 @@ TRABAJOS
 TÍTULO
 =====================================*/
 
+.titulo-trabajos{
+    text-align:center;
+    margin-bottom:45px;
+}
 
 .titulo-trabajos span{
     display:block;
     color:#0b5ed7;
-    font-size:15px;
     font-weight:700;
+    font-size:15px;
     letter-spacing:2px;
-    margin-bottom:12px;
     text-transform:uppercase;
+    margin-bottom:12px;
 }
 
 .titulo-trabajos h2{
-    max-width:850px;
-    margin:auto;
     font-size:42px;
-    line-height:1.2;
     color:#16324f;
+    margin:15px 0;
+    line-height:1.2;
 }
 
 .titulo-trabajos p{
-    max-width:700px;
-    margin:20px auto 0;
-    color:#667085;
+    max-width:750px;
+    margin:auto;
+    color:#5d6978;
+    line-height:1.8;
     font-size:17px;
-    line-height:1.8;
-}
-
-.titulo-trabajos p{
-    max-width:700px;
-    margin:20px auto 0;
-    color:#667085;
-    font-size:18px;
-    line-height:1.8;
 }
 
 /*====================================
-CONTENEDOR DE LA GALERÍA
+CONTENEDOR DEL CARRUSEL
 =====================================*/
 
 .galeria-contenedor{
@@ -70,12 +65,13 @@ GALERÍA
     grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
+
 /*====================================
 TARJETAS
 =====================================*/
 
 .trabajo{
-    background:#fff;
+    background:#ffffff;
     border-radius:18px;
     overflow:hidden;
     box-shadow:0 8px 22px rgba(0,0,0,.08);
@@ -88,8 +84,9 @@ TARJETAS
 }
 
 /*====================================
-IMÁGENES
+IMAGEN
 =====================================*/
+
 .trabajo img{
     width:100%;
     height:230px;
@@ -97,6 +94,7 @@ IMÁGENES
     display:block;
     transition:.45s;
 }
+
 .trabajo:hover img{
     transform:scale(1.05);
 }
@@ -110,15 +108,15 @@ INFORMACIÓN
 }
 
 .info h3{
-    font-size:22px;
     color:#16324f;
+    font-size:22px;
     margin-bottom:12px;
 }
 
 .info p{
-    font-size:16px;
     color:#667085;
     line-height:1.7;
+    font-size:16px;
 }
 
 /*====================================
@@ -143,17 +141,17 @@ BOTONES DEL CARRUSEL
 
     background:rgba(11,94,215,.90);
 
-    color:#fff;
+    color:#ffffff;
 
     font-size:26px;
 
     cursor:pointer;
 
-    z-index:100;
-
     justify-content:center;
 
     align-items:center;
+
+    z-index:100;
 
     transition:.3s;
 
@@ -181,35 +179,71 @@ BOTONES DEL CARRUSEL
 
 }
 
+/*====================================
+TABLET
+=====================================*/
+
 @media(max-width:991px){
 
 .trabajos{
+
     padding:60px 20px;
+
 }
 
 .galeria-trabajos{
+
     grid-template-columns:repeat(2,1fr);
+
     gap:22px;
+
+}
+
+.titulo-trabajos{
+
+    margin-bottom:40px;
+
 }
 
 .titulo-trabajos h2{
+
     font-size:36px;
+
 }
 
 .titulo-trabajos p{
+
+    max-width:650px;
+
     font-size:16px;
+
 }
 
 .trabajo img{
+
     height:220px;
+
+}
+
+.info{
+
+    padding:20px;
+
 }
 
 .info h3{
+
     font-size:21px;
-}
 
 }
 
+.info p{
+
+    font-size:15px;
+
+}
+
+}
 
 /*====================================
 MÓVIL
@@ -225,10 +259,13 @@ SECCIÓN
     padding:55px 15px;
 }
 
+/*====================================
+TÍTULO
+=====================================*/
+
 .titulo-trabajos{
     margin-bottom:35px;
 }
-
 
 .titulo-trabajos span{
     font-size:14px;
@@ -240,15 +277,9 @@ SECCIÓN
 }
 
 .titulo-trabajos p{
+    max-width:100%;
     font-size:15px;
     line-height:1.7;
-}
-.info{
-    padding:20px;
-}
-
-.info h3{
-    font-size:21px;
 }
 
 /*====================================
@@ -267,11 +298,11 @@ GALERÍA
 
     display:flex;
 
-    gap:18px;
-
     overflow-x:auto;
 
     overflow-y:hidden;
+
+    gap:20px;
 
     scroll-behavior:smooth;
 
@@ -284,7 +315,9 @@ GALERÍA
 }
 
 .galeria-trabajos::-webkit-scrollbar{
+
     display:none;
+
 }
 
 /*====================================
@@ -299,8 +332,6 @@ TARJETAS
 
     scroll-snap-align:start;
 
-    border-radius:18px;
-
 }
 
 /*====================================
@@ -311,7 +342,7 @@ IMAGEN
 
     width:100%;
 
-    height:220px;
+    height:240px;
 
     object-fit:cover;
 
@@ -324,16 +355,23 @@ INFORMACIÓN
 =====================================*/
 
 .info{
-    padding:22px;
+
+    padding:20px;
+
 }
 
 .info h3{
-    font-size:22px;
+
+    font-size:21px;
+
 }
 
 .info p{
+
     font-size:15px;
+
     line-height:1.7;
+
 }
 
 /*====================================
@@ -344,17 +382,17 @@ BOTONES
 
     display:flex;
 
-    align-items:center;
-
-    justify-content:center;
-
     position:absolute;
 
-    top:110px;
+    top:120px;
 
     width:48px;
 
     height:48px;
+
+    justify-content:center;
+
+    align-items:center;
 
     border:none;
 
@@ -396,30 +434,63 @@ BOTONES
 
 }
 
+/*====================================
+MÓVILES PEQUEÑOS
+=====================================*/
+
 @media(max-width:480px){
+
+/*====================================
+TÍTULO
+=====================================*/
 
 .titulo-trabajos h2{
     font-size:26px;
 }
 
+.titulo-trabajos p{
+    font-size:14px;
+}
+
+/*====================================
+IMAGEN
+=====================================*/
+
 .trabajo img{
     height:210px;
 }
 
+/*====================================
+BOTONES
+=====================================*/
+
 .btn-img{
+
     width:42px;
+
     height:42px;
+
     font-size:22px;
+
     top:105px;
+
 }
 
 .btn-anterior{
+
     left:10px;
+
 }
 
 .btn-siguiente{
+
     right:10px;
+
 }
+
+/*====================================
+INFORMACIÓN
+=====================================*/
 
 .info{
     padding:18px;
@@ -431,6 +502,7 @@ BOTONES
 
 .info p{
     font-size:14px;
+    line-height:1.7;
 }
 
 }

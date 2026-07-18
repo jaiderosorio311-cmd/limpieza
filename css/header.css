@@ -40,6 +40,8 @@ HEADER
 
 }
 
+
+
 .contenedor-header{
 
     width:min(1200px,92%);
@@ -61,7 +63,9 @@ HEADER
     display:flex;
 
     align-items:center;
-
+    text-decoration: none;
+    color: #2d2828;
+    font-family: cursive;
 }
 
 .logo img{

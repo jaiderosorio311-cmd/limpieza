@@ -10,8 +10,7 @@ TRABAJOS
 }
 
 .contenedor-trabajos{
-    max-width:1200px;
-    width:100%;
+    width:min(1300px,95%);
     margin:auto;
 }
 
@@ -19,10 +18,6 @@ TRABAJOS
 TÍTULO
 =====================================*/
 
-.titulo-trabajos{
-    text-align:center;
-    margin-bottom:45px;
-}
 
 .titulo-trabajos span{
     display:block;
@@ -37,9 +32,17 @@ TÍTULO
 .titulo-trabajos h2{
     max-width:850px;
     margin:auto;
-    font-size:44px;
+    font-size:42px;
     line-height:1.2;
     color:#16324f;
+}
+
+.titulo-trabajos p{
+    max-width:700px;
+    margin:20px auto 0;
+    color:#667085;
+    font-size:17px;
+    line-height:1.8;
 }
 
 .titulo-trabajos p{
@@ -65,9 +68,8 @@ GALERÍA
 .galeria-trabajos{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:28px;
+    gap:25px;
 }
-
 /*====================================
 TARJETAS
 =====================================*/
@@ -88,15 +90,13 @@ TARJETAS
 /*====================================
 IMÁGENES
 =====================================*/
-
 .trabajo img{
     width:100%;
-    height:210px;
+    height:230px;
     object-fit:cover;
     display:block;
     transition:.45s;
 }
-
 .trabajo:hover img{
     transform:scale(1.05);
 }
@@ -106,11 +106,11 @@ INFORMACIÓN
 =====================================*/
 
 .info{
-    padding:24px;
+    padding:22px;
 }
 
 .info h3{
-    font-size:24px;
+    font-size:22px;
     color:#16324f;
     margin-bottom:12px;
 }
@@ -181,14 +181,10 @@ BOTONES DEL CARRUSEL
 
 }
 
-/*====================================
-TABLET
-=====================================*/
-
 @media(max-width:991px){
 
 .trabajos{
-    padding:55px 18px 60px;
+    padding:60px 20px;
 }
 
 .galeria-trabajos{
@@ -209,7 +205,7 @@ TABLET
 }
 
 .info h3{
-    font-size:22px;
+    font-size:21px;
 }
 
 }
@@ -226,12 +222,13 @@ SECCIÓN
 =====================================*/
 
 .trabajos{
-    padding:45px 15px 55px;
+    padding:55px 15px;
 }
 
 .titulo-trabajos{
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
+
 
 .titulo-trabajos span{
     font-size:14px;
@@ -245,6 +242,13 @@ SECCIÓN
 .titulo-trabajos p{
     font-size:15px;
     line-height:1.7;
+}
+.info{
+    padding:20px;
+}
+
+.info h3{
+    font-size:21px;
 }
 
 /*====================================
@@ -392,3 +396,41 @@ BOTONES
 
 }
 
+@media(max-width:480px){
+
+.titulo-trabajos h2{
+    font-size:26px;
+}
+
+.trabajo img{
+    height:210px;
+}
+
+.btn-img{
+    width:42px;
+    height:42px;
+    font-size:22px;
+    top:105px;
+}
+
+.btn-anterior{
+    left:10px;
+}
+
+.btn-siguiente{
+    right:10px;
+}
+
+.info{
+    padding:18px;
+}
+
+.info h3{
+    font-size:20px;
+}
+
+.info p{
+    font-size:14px;
+}
+
+}

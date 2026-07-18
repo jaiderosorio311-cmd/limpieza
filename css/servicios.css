@@ -1,3 +1,4 @@
+
 /*=========================================
 SERVICIOS
 =========================================*/
@@ -5,7 +6,7 @@ SERVICIOS
 .servicios{
     width:100%;
     padding:70px 20px;
-     background:#eef5ff;
+    background:#eef5ff;
 }
 
 .contenedor-servicios{
@@ -23,15 +24,20 @@ TÍTULO
 }
 
 .titulo-servicios span{
+    display:block;
     color:#0b5ed7;
     font-weight:700;
+    font-size:15px;
     letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
 }
 
 .titulo-servicios h2{
     font-size:42px;
-    margin:15px 0;
     color:#16324f;
+    margin:15px 0;
+    line-height:1.2;
 }
 
 .titulo-servicios p{
@@ -39,6 +45,15 @@ TÍTULO
     margin:auto;
     color:#5d6978;
     line-height:1.8;
+    font-size:17px;
+}
+
+/*=========================================
+CONTENEDOR DEL CARRUSEL
+=========================================*/
+
+.servicios-contenedor{
+    position:relative;
 }
 
 /*=========================================
@@ -86,7 +101,7 @@ IMAGEN
     transition:.45s;
 }
 
-.card-servicio:hover img{
+.card-servicio:hover .imagen-servicio img{
     transform:scale(1.05);
 }
 
@@ -100,21 +115,74 @@ CONTENIDO
 
 .contenido-servicio h3{
     color:#16324f;
-    margin-bottom:12px;
     font-size:22px;
+    margin-bottom:12px;
 }
 
 .contenido-servicio p{
     color:#667085;
     line-height:1.7;
+    font-size:16px;
 }
 
 /*=========================================
-BOTONES RESPONSIVE
+BOTONES DEL CARRUSEL
 =========================================*/
 
-.controles-servicios{
+.btn-servicio{
+
     display:none;
+
+    position:absolute;
+
+    top:105px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(11,94,215,.90);
+
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:100;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+}
+
+.btn-servicio:hover{
+
+    background:#084298;
+
+    transform:scale(1.08);
+
+}
+
+.btn-servicio-anterior{
+
+    left:15px;
+
+}
+
+.btn-servicio-siguiente{
+
+    right:15px;
+
 }
 
 /*=========================================
@@ -129,10 +197,23 @@ TABLET
 
 .grid-servicios{
     grid-template-columns:repeat(2,1fr);
+    gap:22px;
 }
 
 .titulo-servicios h2{
     font-size:36px;
+}
+
+.titulo-servicios p{
+    font-size:16px;
+}
+
+.imagen-servicio{
+    height:220px;
+}
+
+.contenido-servicio h3{
+    font-size:21px;
 }
 
 }
@@ -147,17 +228,39 @@ MÓVIL
     padding:55px 15px;
 }
 
+/*=========================================
+TÍTULO
+=========================================*/
+
 .titulo-servicios{
     margin-bottom:35px;
 }
 
+.titulo-servicios span{
+    font-size:14px;
+}
+
 .titulo-servicios h2{
     font-size:30px;
+    line-height:1.25;
 }
 
 .titulo-servicios p{
     font-size:15px;
+    line-height:1.7;
 }
+
+/*=========================================
+CONTENEDOR
+=========================================*/
+
+.servicios-contenedor{
+    position:relative;
+}
+
+/*=========================================
+CARRUSEL
+=========================================*/
 
 .grid-servicios{
 
@@ -165,29 +268,43 @@ MÓVIL
 
     overflow-x:auto;
 
+    overflow-y:hidden;
+
+    gap:20px;
+
     scroll-behavior:smooth;
 
     scroll-snap-type:x mandatory;
 
-    gap:20px;
+    -webkit-overflow-scrolling:touch;
 
     scrollbar-width:none;
 
 }
 
 .grid-servicios::-webkit-scrollbar{
+
     display:none;
+
 }
+
+/*=========================================
+TARJETAS
+=========================================*/
 
 .card-servicio{
 
-    min-width:100%;
-
     flex:0 0 100%;
 
-    scroll-snap-align:center;
+    min-width:100%;
+
+    scroll-snap-align:start;
 
 }
+
+/*=========================================
+IMAGEN
+=========================================*/
 
 .imagen-servicio{
 
@@ -195,41 +312,85 @@ MÓVIL
 
 }
 
-.controles-servicios{
+/*=========================================
+BOTONES
+=========================================*/
+
+.btn-servicio{
 
     display:flex;
 
+    position:absolute;
+
+    top:120px;
+
+    width:48px;
+
+    height:48px;
+
     justify-content:center;
 
-    gap:15px;
-
-    margin-top:30px;
-
-}
-
-.controles-servicios button{
+    align-items:center;
 
     border:none;
 
-    background:#0b5ed7;
+    border-radius:50%;
+
+    background:rgba(11,94,215,.90);
 
     color:#fff;
 
-    padding:12px 22px;
-
-    border-radius:8px;
+    font-size:26px;
 
     cursor:pointer;
 
-    font-size:15px;
+    z-index:100;
 
     transition:.3s;
 
+    box-shadow:0 6px 16px rgba(0,0,0,.30);
+
 }
 
-.controles-servicios button:hover{
+.btn-servicio:hover{
 
     background:#084298;
+
+}
+
+.btn-servicio-anterior{
+
+    left:12px;
+
+}
+
+.btn-servicio-siguiente{
+
+    right:12px;
+
+}
+
+/*=========================================
+CONTENIDO
+=========================================*/
+
+.contenido-servicio{
+
+    padding:20px;
+
+}
+
+.contenido-servicio h3{
+
+    font-size:21px;
+
+}
+
+.contenido-servicio p{
+
+    font-size:15px;
+
+    line-height:1.7;
 
 }
 
@@ -242,23 +403,59 @@ MÓVILES PEQUEÑOS
 @media(max-width:480px){
 
 .titulo-servicios h2{
+
     font-size:26px;
+
 }
 
 .imagen-servicio{
+
     height:210px;
+
+}
+
+.btn-servicio{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:22px;
+
+    top:105px;
+
+}
+
+.btn-servicio-anterior{
+
+    left:10px;
+
+}
+
+.btn-servicio-siguiente{
+
+    right:10px;
+
 }
 
 .contenido-servicio{
+
     padding:18px;
+
 }
 
 .contenido-servicio h3{
+
     font-size:20px;
+
 }
 
 .contenido-servicio p{
+
     font-size:14px;
+
 }
 
 }
+
+

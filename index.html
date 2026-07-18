@@ -94,108 +94,136 @@
     </div>
 
 </section>
+
 <section class="servicios" id="servicios">
 
     <div class="contenedor-servicios">
 
         <div class="titulo-servicios">
+
             <span>NUESTROS SERVICIOS</span>
+
             <h2>Servicios de limpieza y mantenimiento en general</h2>
+
             <p>
                 Brindamos soluciones profesionales para empresas, oficinas,
                 hogares y espacios comerciales con personal altamente capacitado.
             </p>
+
         </div>
 
-        <div class="grid-servicios">
+        <!-- CONTENEDOR DEL CARRUSEL -->
+        <div class="servicios-contenedor">
 
-            <div class="card-servicio">
+            <!-- BOTÓN ANTERIOR -->
+            <button id="anteriorServicio" class="btn-servicio btn-servicio-anterior">
+                &#10094;
+            </button>
 
-                <div class="imagen-servicio">
-                    <img src="img/servicios/img1.jpg" alt="">
+            <!-- GALERÍA -->
+            <div class="grid-servicios">
+
+                <!-- SERVICIO 1 -->
+                <div class="card-servicio">
+
+                    <div class="imagen-servicio">
+                        <img src="img/servicios/img1.jpg" alt="Limpieza de Oficinas">
+                    </div>
+
+                    <div class="contenido-servicio">
+
+                        <h3>Limpieza de Oficinas</h3>
+
+                        <p>
+                            Limpieza diaria y profunda de oficinas,
+                            escritorios, salas de reuniones y áreas comunes.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="contenido-servicio">
-                    <h3>Limpieza de Oficinas</h3>
+                <!-- SERVICIO 2 -->
+                <div class="card-servicio">
 
-                    <p>
-                        Limpieza diaria y profunda de oficinas,
-                        escritorios, salas de reuniones y áreas comunes.
-                    </p>
+                    <div class="imagen-servicio">
+                        <img src="img/servicios/img2.jpg" alt="Limpieza Residencial">
+                    </div>
+
+                    <div class="contenido-servicio">
+
+                        <h3>Limpieza Residencial</h3>
+
+                        <p>
+                            Casas, apartamentos y conjuntos residenciales
+                            con acabados impecables.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SERVICIO 3 -->
+                <div class="card-servicio">
+
+                    <div class="imagen-servicio">
+                        <img src="img/servicios/img4.png" alt="Limpieza de Colegios">
+                    </div>
+
+                    <div class="contenido-servicio">
+
+                        <h3>Limpieza de Colegios</h3>
+
+                        <p>
+                            Realizamos la limpieza de aulas, incluyendo el aseo
+                            de mesas, sillas, pisos y demás espacios educativos,
+                            garantizando ambientes limpios, seguros y saludables
+                            para estudiantes, docentes y personal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SERVICIO 4 -->
+                <div class="card-servicio">
+
+                    <div class="imagen-servicio">
+                        <img src="img/servicios/img6.jpg" alt="Limpieza Post Obra">
+                    </div>
+
+                    <div class="contenido-servicio">
+
+                        <h3>Limpieza Post Obra</h3>
+
+                        <p>
+                            Eliminación de residuos y limpieza
+                            después de construcciones o remodelaciones.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="card-servicio">
+            <!-- BOTÓN SIGUIENTE -->
+            <button id="siguienteServicio" class="btn-servicio btn-servicio-siguiente">
+                &#10095;
+            </button>
 
-                <div class="imagen-servicio">
-                    <img src="img/servicios/img2.jpg" alt="">
-                </div>
-
-                <div class="contenido-servicio">
-                    <h3>Limpieza Residencial</h3>
-
-                    <p>
-                        Casas, apartamentos y conjuntos residenciales
-                        con acabados impecables.
-                    </p>
-                </div>
-
-            </div>
-<div class="card-servicio">
-
-    <div class="imagen-servicio">
-        <img src="img/servicios/img4.png" alt="Limpieza de colegios">
-    </div>
-
-    <div class="contenido-servicio">
-
-        <h3>Limpieza de Colegios</h3>
-
-        <p>
-            Realizamos la limpieza de aulas, incluyendo el aseo de mesas, sillas,
-            pisos y demás espacios educativos, garantizando ambientes limpios,
-            seguros y saludables para estudiantes, docentes y personal.
-        </p>
-
-    </div>
-
-</div>
-
-
-            <div class="card-servicio">
-
-                <div class="imagen-servicio">
-                    <img src="img/servicios/img6.jpg" alt="">
-                </div>
-
-                <div class="contenido-servicio">
-                    <h3>Limpieza Post Obra</h3>
-
-                    <p>
-                        Eliminación de residuos y limpieza
-                        después de construcciones o remodelaciones.
-                    </p>
-                </div>
-
-            </div>
-
-           
-
-        
-        </div>
-         <div class="controles-servicios">
-            <button id="anteriorServicio">Anterior</button>
-            <button id="siguienteServicio">Siguiente </button>
         </div>
 
     </div>
 
 </section>
 
+
+
 <!--=========================
 TRABAJOS REALIZADOS
 ==========================-->
+
 
 <section class="trabajos" id="trabajos">
 
@@ -215,122 +243,129 @@ TRABAJOS REALIZADOS
 
         </div>
 
-        <div class="galeria-trabajos">
+        <div class="galeria-contenedor">
 
-            <div class="trabajo">
+            <button id="anteriorTrabajo" class="btn-img btn-anterior">
+                &#10094;
+            </button>
 
-                <img src="img/trabajos/img1.jpeg" alt="Sala de reuniones">
+            <div class="galeria-trabajos">
 
-                <div class="info">
+                <div class="trabajo">
 
-                    <h3>Sala de Reuniones</h3>
+                    <img src="img/trabajos/img1.jpeg" alt="Sala de reuniones">
 
-                    <p>
-                        Limpieza y desinfección de mesas, sillas y superficies
-                        para mantener un ambiente limpio y profesional.
-                    </p>
+                    <div class="info">
+
+                        <h3>Sala de Reuniones</h3>
+
+                        <p>
+                            Limpieza y desinfección de mesas, sillas y superficies
+                            para mantener un ambiente limpio y profesional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="trabajo">
+
+                    <img src="img/trabajos/img2.jpeg" alt="Áreas de oficina">
+
+                    <div class="info">
+
+                        <h3>Áreas de Oficina</h3>
+
+                        <p>
+                            Limpieza integral de oficinas, pasillos y estaciones de
+                            trabajo para conservar espacios ordenados e higiénicos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="trabajo">
+
+                    <img src="img/trabajos/img3.jpeg" alt="Puestos de trabajo">
+
+                    <div class="info">
+
+                        <h3>Puestos de Trabajo</h3>
+
+                        <p>
+                            Limpieza de escritorios, equipos y áreas compartidas,
+                            proporcionando un entorno seguro y confortable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="trabajo">
+
+                    <img src="img/trabajos/img4.jpeg" alt="Espacios corporativos">
+
+                    <div class="info">
+
+                        <h3>Espacios Corporativos</h3>
+
+                        <p>
+                            Limpieza de oficinas corporativas para conservar
+                            instalaciones impecables.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="trabajo">
+
+                    <img src="img/trabajos/img5.jpeg" alt="Sala ejecutiva">
+
+                    <div class="info">
+
+                        <h3>Sala Ejecutiva</h3>
+
+                        <p>
+                            Limpieza detallada de salas ejecutivas y mobiliario,
+                            cuidando cada superficie para una excelente presentación.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="trabajo">
+
+                    <img src="img/trabajos/img6.jpeg" alt="Comedor empresarial">
+
+                    <div class="info">
+
+                        <h3>Comedor Empresarial</h3>
+
+                        <p>
+                            Limpieza y desinfección de comedores, mesas y áreas
+                            comunes para garantizar espacios limpios y agradables.
+                        </p>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="trabajo">
-
-                <img src="img/trabajos/img2.jpeg" alt="Áreas de oficina">
-
-                <div class="info">
-
-                    <h3>Áreas de Oficina</h3>
-
-                    <p>
-                        Limpieza integral de oficinas, pasillos y estaciones de
-                        trabajo para conservar espacios ordenados e higiénicos.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="trabajo">
-
-                <img src="img/trabajos/img3.jpeg" alt="Puestos de trabajo">
-
-                <div class="info">
-
-                    <h3>Puestos de Trabajo</h3>
-
-                    <p>
-                        Limpieza de escritorios, equipos y áreas compartidas,
-                        proporcionando un entorno seguro y confortable.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="trabajo">
-
-                <img src="img/trabajos/img4.jpeg" alt="Espacios corporativos">
-
-                <div class="info">
-
-                    <h3>Espacios Corporativos</h3>
-
-                    <p>
-                         Limpieza de oficinas corporativas para
-                        conservar instalaciones impecables.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="trabajo">
-
-                <img src="img/trabajos/img5.jpeg" alt="Sala ejecutiva">
-
-                <div class="info">
-
-                    <h3>Sala Ejecutiva</h3>
-
-                    <p>
-                        Limpieza detallada de salas ejecutivas y mobiliario,
-                        cuidando cada superficie para una excelente presentación.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="trabajo">
-
-                <img src="img/trabajos/img6.jpeg" alt="Comedor empresarial">
-
-                <div class="info">
-
-                    <h3>Comedor Empresarial</h3>
-
-                    <p>
-                        Limpieza y desinfección de comedores, mesas y áreas
-                        comunes para garantizar espacios limpios y agradables.
-                    </p>
-
-                </div>
-
-            </div>
+            <button id="siguienteTrabajo" class="btn-img btn-siguiente">
+                &#10095;
+            </button>
 
         </div>
-
-         <div class="controles-trabajos">
-            <button id="anteriorTrabajo">Anterior</button>
-            <button id="siguienteTrabajo">Siguiente </button>
-        </div>
-
-        
 
     </div>
 
-    </section>
+</section>
+
+
 <section class="info" id="info">
 
     <div class="contenedor-info">
@@ -530,7 +565,7 @@ TRABAJOS REALIZADOS
         <!-- Información -->
         <div class="footer-col">
 
-        
+            <img src="img/logo.png" alt="Logo" class="footer-logo">
 
             <p>
                 Empresa especializada en limpieza y mantenimiento de oficinas,

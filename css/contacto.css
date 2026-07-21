@@ -3,19 +3,76 @@ CONTACTO
 ==================================*/
 
 .contacto{
+
     width:100%;
-    padding:70px 20px;
-    background:#f8fafc;
+    padding:100px 20px;
+
+    background:
+    linear-gradient(135deg,#edf6ff 0%,#ffffff 50%,#f2f9ff 100%);
+
+    position:relative;
+    overflow:hidden;
+
 }
 
+/* Círculos decorativos */
+
+.contacto::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(33,150,243,.08);
+
+    top:-180px;
+    left:-180px;
+
+    filter:blur(10px);
+
+}
+
+.contacto::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(33,150,243,.06);
+
+    right:-120px;
+    bottom:-120px;
+
+    filter:blur(15px);
+
+}
+
+/*==================================
+CONTENEDOR
+==================================*/
+
 .contenedor-contacto{
+
+    position:relative;
+    z-index:2;
 
     width:min(1200px,95%);
     margin:auto;
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:70px;
+
     align-items:center;
 
 }
@@ -26,51 +83,200 @@ INFORMACIÓN
 
 .info-contacto span{
 
+    display:inline-block;
+
     color:#2196f3;
-    font-weight:bold;
-    letter-spacing:2px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
 
 }
 
 .info-contacto h2{
 
-    font-size:42px;
-    margin:15px 0;
-    color:#1f2937;
+    font-size:50px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    background:linear-gradient(135deg,#2196f3,#1565c0);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 
 }
 
 .info-contacto p{
 
-    color:#666;
-    line-height:1.8;
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
 
 }
+
+/*==================================
+ITEMS
+==================================*/
 
 .item-contacto{
 
     margin-top:30px;
 
+    padding:22px 25px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.item-contacto:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 40px rgba(33,150,243,.15);
+
 }
 
 .item-contacto h3{
 
-    margin-bottom:8px;
     color:#1f2937;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.item-contacto p{
+
+    margin:0;
+
+    color:#666;
 
 }
 
 .item-contacto a{
 
     color:#2196f3;
+
     text-decoration:none;
-    font-weight:bold;
+
+    font-weight:700;
+
+    transition:.3s;
 
 }
 
 .item-contacto a:hover{
 
-    text-decoration:underline;
+    color:#1565c0;
+
+    letter-spacing:.5px;
+
+}/*==================================
+FORMULARIO
+==================================*/
+
+.formulario-contacto{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.10);
+
+    transition:.4s;
+
+    animation:aparecerFormulario .8s ease;
+
+}
+
+.formulario-contacto:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 30px 70px rgba(33,150,243,.18);
+
+}
+
+/* Brillo decorativo */
+
+.formulario-contacto::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(33,150,243,.08);
+
+    top:-120px;
+    right:-120px;
+
+    pointer-events:none;
+
+}
+
+.formulario-contacto::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.5);
+
+    bottom:-70px;
+    left:-70px;
+
+    pointer-events:none;
 
 }
 
@@ -78,72 +284,123 @@ INFORMACIÓN
 FORMULARIO
 ==================================*/
 
-.formulario-contacto{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
-
-}
-
 #formContacto{
 
+    position:relative;
+
+    z-index:2;
+
     display:flex;
+
     flex-direction:column;
-    gap:20px;
+
+    gap:22px;
 
 }
+
+/*==================================
+INPUTS
+==================================*/
 
 #formContacto input,
 #formContacto textarea{
 
     width:100%;
 
-    padding:16px 18px;
+    padding:18px 22px;
 
-    border:1px solid #ddd;
+    background:#f8fbff;
 
-    border-radius:12px;
+    border:2px solid transparent;
+
+    border-radius:16px;
 
     outline:none;
 
     font-size:16px;
 
-    transition:.3s;
-
     font-family:inherit;
 
+    color:#1f2937;
+
+    transition:
+    background .35s,
+    border-color .35s,
+    transform .25s,
+    box-shadow .35s;
+
 }
 
-#formContacto textarea{
+/* Hover */
 
-    resize:vertical;
+#formContacto input:hover,
+#formContacto textarea:hover{
 
-    min-height:170px;
+    background:#ffffff;
 
 }
+
+/* Focus */
 
 #formContacto input:focus,
 #formContacto textarea:focus{
 
+    background:#fff;
+
     border-color:#2196f3;
 
-    box-shadow:0 0 10px rgba(33,150,243,.15);
+    transform:scale(1.02);
+
+    box-shadow:
+    0 12px 30px rgba(33,150,243,.18);
 
 }
+
+/* Placeholder */
 
 #formContacto input::placeholder,
 #formContacto textarea::placeholder{
 
-    color:#999;
+    color:#9ca3af;
+
+    transition:.3s;
+
+}
+
+/* Placeholder al enfocar */
+
+#formContacto input:focus::placeholder,
+#formContacto textarea:focus::placeholder{
+
+    color:#2196f3;
 
 }
 
 /*==================================
+TEXTAREA
+==================================*/
+
+#formContacto textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+    line-height:1.7;
+
+}
+
+/*==================================
+AUTOFILL (Chrome)
+==================================*/
+
+#formContacto input:-webkit-autofill{
+
+    -webkit-box-shadow:0 0 0 1000px #f8fbff inset;
+
+    -webkit-text-fill-color:#1f2937;
+
+}/*==================================
 BOTONES
 ==================================*/
 
@@ -159,45 +416,113 @@ BOTONES
 
 .botones-contacto button{
 
+    position:relative;
+
+    overflow:hidden;
+
     flex:1;
 
-    padding:16px;
+    padding:18px 25px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:16px;
 
     cursor:pointer;
 
-    font-size:16px;
+    font-size:17px;
 
-    font-weight:bold;
+    font-weight:700;
+
+    letter-spacing:.5px;
 
     transition:.35s;
 
 }
 
+/*==================================
+BOTÓN AZUL
+==================================*/
+
 #btnCesar{
 
-    background:#2196f3;
+    background:linear-gradient(135deg,#2196f3,#1565c0);
 
     color:#fff;
 
+    box-shadow:
+    0 15px 35px rgba(33,150,243,.30);
+
 }
+
+#btnCesar:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 25px 45px rgba(33,150,243,.40);
+
+}
+
+/*==================================
+EFECTO BRILLO
+==================================*/
+
+.botones-contacto button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:60%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.botones-contacto button:hover::before{
+
+    left:150%;
+
+}
+
+.botones-contacto button:active{
+
+    transform:scale(.97);
+
+}
+
+/*==================================
+SI AGREGAS UN SEGUNDO BOTÓN
+==================================*/
 
 #btnIngrid{
 
-    background:#25D366;
+    background:linear-gradient(135deg,#25D366,#18a84f);
 
     color:#fff;
 
+    box-shadow:
+    0 15px 35px rgba(37,211,102,.30);
+
 }
 
-.botones-contacto button:hover{
+#btnIngrid:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-5px);
 
-    box-shadow:0 12px 20px rgba(0,0,0,.15);
+    box-shadow:
+    0 25px 45px rgba(37,211,102,.40);
 
 }
 
@@ -209,7 +534,9 @@ ERRORES
 
     border:2px solid #ff3b30 !important;
 
-    background:#fff3f3;
+    background:#fff4f4 !important;
+
+    animation:temblar .25s linear 2;
 
 }
 
@@ -217,21 +544,147 @@ ERRORES
 
     color:#ff3b30;
 
-    font-weight:bold;
+    font-weight:600;
 
 }
 
 /*==================================
+ANIMACIONES
+==================================*/
+
+@keyframes aparecerFormulario{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes temblar{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    25%{
+
+        transform:translateX(-5px);
+
+    }
+
+    50%{
+
+        transform:translateX(5px);
+
+    }
+
+    75%{
+
+        transform:translateX(-5px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==================================
+ANIMACIÓN DE LOS INPUTS
+==================================*/
+
+#formContacto input,
+#formContacto textarea{
+
+    animation:fadeInput .6s ease both;
+
+}
+
+#formContacto input:nth-child(1){
+
+    animation-delay:.10s;
+
+}
+
+#formContacto input:nth-child(2){
+
+    animation-delay:.20s;
+
+}
+
+#formContacto input:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+#formContacto textarea{
+
+    animation-delay:.40s;
+
+}
+
+.botones-contacto{
+
+    animation:fadeInput .6s ease both;
+
+    animation-delay:.50s;
+
+}
+
+@keyframes fadeInput{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================
 TABLET
 ==================================*/
 
-@media(max-width:900px){
+@media (max-width:900px){
+
+    .contacto{
+
+        padding:80px 20px;
+
+    }
 
     .contenedor-contacto{
 
         grid-template-columns:1fr;
 
-        gap:40px;
+        gap:50px;
 
     }
 
@@ -243,21 +696,87 @@ TABLET
 
     .info-contacto h2{
 
-        font-size:34px;
+        font-size:40px;
+
+    }
+
+    .info-contacto p{
+
+        font-size:16px;
+
+    }
+
+    .item-contacto{
+
+        text-align:left;
+
+    }
+
+    .formulario-contacto{
+
+        padding:35px;
 
     }
 
 }
 
 /*==================================
-MÓVIL
+MÓVILES
 ==================================*/
 
-@media(max-width:600px){
+@media (max-width:600px){
 
     .contacto{
 
-        padding:70px 15px;
+        padding:60px 15px;
+
+    }
+
+    .contenedor-contacto{
+
+        width:100%;
+
+        gap:35px;
+
+    }
+
+    .info-contacto span{
+
+        font-size:13px;
+
+        letter-spacing:2px;
+
+    }
+
+    .info-contacto h2{
+
+        font-size:32px;
+
+        line-height:1.2;
+
+        margin-bottom:18px;
+
+    }
+
+    .info-contacto p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .item-contacto{
+
+        padding:18px;
+
+        border-radius:16px;
+
+    }
+
+    .item-contacto h3{
+
+        font-size:18px;
 
     }
 
@@ -265,14 +784,30 @@ MÓVIL
 
         padding:25px;
 
+        border-radius:22px;
+
+    }
+
+    #formContacto{
+
+        gap:18px;
+
     }
 
     #formContacto input,
     #formContacto textarea{
 
+        padding:16px;
+
         font-size:15px;
 
-        padding:15px;
+        border-radius:14px;
+
+    }
+
+    #formContacto textarea{
+
+        min-height:150px;
 
     }
 
@@ -280,16 +815,86 @@ MÓVIL
 
         flex-direction:column;
 
+        gap:15px;
+
     }
 
     .botones-contacto button{
 
         width:100%;
 
+        padding:17px;
+
+        font-size:16px;
+
     }
 
 }
 
+/*==================================
+MÓVILES PEQUEÑOS
+==================================*/
+
+@media (max-width:380px){
+
+    .info-contacto h2{
+
+        font-size:28px;
+
+    }
+
+    .formulario-contacto{
+
+        padding:20px;
+
+    }
+
+}
+
+/*==================================
+SCROLLBAR
+==================================*/
+
+#formContacto textarea::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#formContacto textarea::-webkit-scrollbar-track{
+
+    background:#edf6ff;
+
+    border-radius:20px;
+
+}
+
+#formContacto textarea::-webkit-scrollbar-thumb{
+
+    background:#2196f3;
+
+    border-radius:20px;
+
+}
+
+#formContacto textarea::-webkit-scrollbar-thumb:hover{
+
+    background:#1565c0;
+
+}
+
+/*==================================
+SELECCIÓN DE TEXTO
+==================================*/
+
+#formContacto input::selection,
+#formContacto textarea::selection{
+
+    background:#2196f3;
+
+    color:#fff;
+
+}
 
 html{
 

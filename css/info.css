@@ -437,3 +437,202 @@ MÓVILES MUY PEQUEÑOS
 }
 
 }
+
+/*==================================
+RESPONSIVE PREGUNTAS FRECUENTES
+==================================*/
+
+@media (max-width:768px){
+
+    .preguntas-frecuentes{
+
+        width:100%;
+
+    }
+
+    .preguntas-frecuentes .dato{
+
+        padding:18px;
+
+        margin-bottom:18px;
+
+    }
+
+    .preguntas-frecuentes .dato h4{
+
+        font-size:18px;
+
+        line-height:1.4;
+
+        margin-bottom:10px;
+
+    }
+
+    .preguntas-frecuentes .dato p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .preguntas-frecuentes .dato{
+
+        padding:15px;
+
+        border-radius:12px;
+
+    }
+
+    .preguntas-frecuentes .dato h4{
+
+        font-size:16px;
+
+    }
+
+    .preguntas-frecuentes .dato p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+}
+/*==================================
+PREGUNTAS FRECUENTES
+==================================*/
+
+.preguntas-frecuentes{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:30px;
+
+}
+
+.preguntas-frecuentes .dato{
+
+    display:block;
+
+    background:#fff;
+
+    border-left:5px solid #0b5ed7;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin:0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.preguntas-frecuentes .dato:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.preguntas-frecuentes .dato h4{
+
+    display:block;
+
+    margin:0 0 12px;
+
+    color:#0b4f8a;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.preguntas-frecuentes .dato p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/*==================================
+RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+
+    .preguntas-frecuentes{
+
+        padding:22px;
+
+    }
+
+    .preguntas-frecuentes .dato{
+
+        padding:18px;
+
+    }
+
+    .preguntas-frecuentes .dato h4{
+
+        font-size:18px;
+
+    }
+
+    .preguntas-frecuentes .dato p{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .preguntas-frecuentes{
+
+        padding:18px;
+
+    }
+
+    .preguntas-frecuentes .dato{
+
+        padding:16px;
+
+    }
+
+    .preguntas-frecuentes .dato h4{
+
+        font-size:17px;
+
+        line-height:1.4;
+
+    }
+
+    .preguntas-frecuentes .dato p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+}

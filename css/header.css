@@ -58,21 +58,79 @@ HEADER
 
 }
 
+/*==============================
+LOGO
+===============================*/
+
 .logo{
 
     display:flex;
 
     align-items:center;
-    text-decoration: none;
-    color: #2d2828;
-    font-family: cursive;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
 }
 
 .logo img{
 
-    height:55px;
+    height:58px;
+
+    width:auto;
 
     display:block;
+
+    transition:.4s;
+
+}
+
+.logo h3{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#1f2937;
+
+    line-height:1;
+
+    transition:.35s;
+
+}
+
+/* Color para las primeras letras */
+
+.logo h3::first-letter{
+
+    color:#2196f3;
+
+}
+
+/* Hover */
+
+.logo:hover img{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.logo:hover h3{
+
+    color:#2196f3;
+
+    letter-spacing:5px;
 
 }
 

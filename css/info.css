@@ -763,3 +763,18 @@ MÓVILES MUY PEQUEÑOS
     }
 
 }
+.acordeon-contenido{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.acordeon.active .acordeon-contenido{
+
+    overflow-y:auto;
+
+}

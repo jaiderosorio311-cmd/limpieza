@@ -23,3 +23,5 @@ function mostrarElementos(){
 window.addEventListener("scroll",mostrarElementos);
 
 mostrarElementos();
+
+

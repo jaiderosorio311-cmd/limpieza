@@ -10,19 +10,40 @@ acordeones.forEach(acordeon => {
 
         const abierto = acordeon.classList.contains("active");
 
+        // Cerrar todos
         acordeones.forEach(item => {
 
             item.classList.remove("active");
 
-            item.querySelector(".acordeon-contenido").style.maxHeight = null;
+            const c = item.querySelector(".acordeon-contenido");
+
+            c.style.maxHeight = "0px";
+
+            c.style.overflowY = "hidden";
 
         });
 
+        // Si estaba cerrado, abrirlo
         if(!abierto){
 
             acordeon.classList.add("active");
 
-            contenido.style.maxHeight = contenido.scrollHeight + "px";
+            const altura = contenido.scrollHeight;
+
+            // Si el contenido es muy alto, limitarlo
+            if(altura > 550){
+
+                contenido.style.maxHeight = "550px";
+
+                contenido.style.overflowY = "auto";
+
+            }else{
+
+                contenido.style.maxHeight = altura + "px";
+
+                contenido.style.overflowY = "hidden";
+
+            }
 
         }
 

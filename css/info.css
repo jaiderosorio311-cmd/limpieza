@@ -3,22 +3,55 @@ INFORMACIÓN
 ====================================*/
 
 .info{
+
     width:100%;
-    padding:80px 20px;
-    background:#f5f7fa;
+
+    padding:90px 20px;
+
+    background:linear-gradient(180deg,#f8fbff 0%,#eef5fc 100%);
+
 }
 
 .contenedor-info{
-    max-width:1100px;
+
+    max-width:1200px;
+
     margin:auto;
+
 }
 
 .titulo-info{
+
     text-align:center;
-    font-size:38px;
-    color:#3796e9;
-    margin-bottom:50px;
-    font-weight:700;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#0b5ed7;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+}
+
+.titulo-info::after{
+
+    content:"";
+
+    width:90px;
+
+    height:5px;
+
+    background:#0b5ed7;
+
+    border-radius:20px;
+
+    display:block;
+
+    margin:18px auto 0;
+
 }
 
 /*====================================
@@ -26,51 +59,70 @@ ACORDEÓN
 ====================================*/
 
 .acordeon{
-    margin-bottom:20px;
+
+    margin-bottom:25px;
+
     background:#fff;
-    border-radius:12px;
+
+    border-radius:18px;
+
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
 }
 
 .acordeon:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(11,94,215,.15);
+
 }
 
 .acordeon-btn{
 
     width:100%;
+
     border:none;
+
     outline:none;
 
-    background:#0b5ed7;
+    background:linear-gradient(135deg,#0b5ed7,#1d72f3);
+
     color:#fff;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:22px 25px;
+    padding:24px 30px;
 
     cursor:pointer;
 
-    font-size:20px;
+    font-size:22px;
+
     font-weight:700;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .acordeon-btn:hover{
-    background:#0d65b1;
+
+    background:linear-gradient(135deg,#0954c2,#0b5ed7);
+
 }
 
 .acordeon-btn span{
 
-    font-size:30px;
-    font-weight:bold;
+    font-size:34px;
+
+    font-weight:700;
 
     transition:.35s;
 
@@ -80,20 +132,19 @@ ACORDEÓN
 
     transform:rotate(45deg);
 
-}
-
-/*====================================
+}/*====================================
 CONTENIDO
 ====================================*/
 
 .acordeon-contenido{
 
     max-height:0;
+
     overflow:hidden;
 
-    background:#fff;
+    background:#ffffff;
 
-    transition:max-height .45s ease;
+    transition:max-height .5s ease;
 
 }
 
@@ -101,22 +152,42 @@ CONTENIDO
 
     list-style:none;
 
-    padding:30px;
+    padding:35px;
+
+    margin:0;
 
 }
 
 .acordeon-contenido li{
 
-    font-size:17px;
-    color:#555;
-    line-height:1.8;
+    position:relative;
 
-    margin-bottom:14px;
+    padding:12px 0 12px 35px;
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.8;
 
 }
 
-.acordeon-contenido li:last-child{
-    margin-bottom:0;
+.acordeon-contenido li::before{
+
+    content:"✔";
+
+    position:absolute;
+
+    left:0;
+
+    top:13px;
+
+    color:#0b5ed7;
+
+    font-weight:bold;
+
+    font-size:18px;
+
 }
 
 /*====================================
@@ -125,433 +196,87 @@ UBICACIÓN
 
 .ubicacion-info{
 
-    padding:30px;
+    padding:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
 
 }
+
+/*====================================
+TARJETAS
+====================================*/
 
 .dato{
 
     display:flex;
+
     align-items:flex-start;
 
-    gap:20px;
-
-    padding:18px 0;
-
-    border-bottom:1px solid #ececec;
-
-}
-
-.dato:last-child{
-
-    border-bottom:none;
-
-}
-
-.icono{
-
-    width:50px;
-    min-width:50px;
-
-    font-size:30px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-}
-
-.dato h4{
-
-    font-size:20px;
-    color:#0b4f8a;
-
-    margin-bottom:8px;
-
-}
-
-.dato p{
-
-    font-size:17px;
-    color:#666;
-
-    line-height:1.7;
-
-    margin:2px 0;
-
-}
-
-/*====================================
-TABLET
-====================================*/
-
-@media(max-width:992px){
-
-.info{
-
-    padding:70px 20px;
-
-}
-
-.titulo-info{
-
-    font-size:34px;
-
-}
-
-.acordeon-btn{
-
-    font-size:19px;
-
-}
-
-.acordeon-contenido ul{
-
-    padding:25px;
-
-}
-
-.ubicacion-info{
-
-    padding:25px;
-
-}
-
-}
-
-/*====================================
-MÓVIL
-====================================*/
-
-@media(max-width:768px){
-
-.info{
-
-    padding:60px 18px;
-
-}
-
-.titulo-info{
-
-    font-size:30px;
-
-    margin-bottom:40px;
-
-}
-
-.acordeon{
-
-    border-radius:10px;
-
-}
-
-.acordeon-btn{
-
-    font-size:18px;
-
-    padding:18px;
-
-}
-
-.acordeon-btn span{
-
-    font-size:28px;
-
-}
-
-.acordeon-contenido ul{
+    gap:18px;
 
     padding:22px;
 
-}
+    background:#f8fbff;
 
-.acordeon-contenido li{
+    border-radius:16px;
 
-    font-size:16px;
-
-}
-
-.ubicacion-info{
-
-    padding:22px;
-
-}
-
-.dato{
-
-    gap:16px;
-
-    padding:16px 0;
-
-}
-
-.icono{
-
-    width:42px;
-    min-width:42px;
-
-    font-size:26px;
-
-}
-
-.dato h4{
-
-    font-size:18px;
-
-}
-
-.dato p{
-
-    font-size:16px;
-
-}
-
-}
-
-/*====================================
-MÓVIL PEQUEÑO
-====================================*/
-
-@media(max-width:480px){
-
-.info{
-
-    padding:50px 15px;
-
-}
-
-.titulo-info{
-
-    font-size:26px;
-
-}
-
-.acordeon-btn{
-
-    padding:16px;
-
-    font-size:16px;
-
-}
-
-.acordeon-btn span{
-
-    font-size:24px;
-
-}
-
-.acordeon-contenido ul{
-
-    padding:18px;
-
-}
-
-.acordeon-contenido li{
-
-    font-size:15px;
-    line-height:1.7;
-
-}
-
-.ubicacion-info{
-
-    padding:18px;
-
-}
-
-.dato{
-
-    gap:12px;
-
-    padding:15px 0;
-
-}
-
-.icono{
-
-    width:34px;
-    min-width:34px;
-
-    font-size:22px;
-
-}
-
-.dato h4{
-
-    font-size:17px;
-
-}
-
-.dato p{
-
-    font-size:15px;
-    line-height:1.6;
-
-}
-
-}
-
-/*====================================
-MÓVILES MUY PEQUEÑOS
-====================================*/
-
-@media(max-width:340px){
-
-.titulo-info{
-
-    font-size:23px;
-
-}
-
-.acordeon-btn{
-
-    font-size:15px;
-    padding:15px;
-
-}
-
-.acordeon-btn span{
-
-    font-size:22px;
-
-}
-
-.icono{
-
-    font-size:20px;
-    width:30px;
-    min-width:30px;
-
-}
-
-.dato h4{
-
-    font-size:16px;
-
-}
-
-.dato p{
-
-    font-size:14px;
-
-}
-
-}
-
-/*==================================
-RESPONSIVE PREGUNTAS FRECUENTES
-==================================*/
-
-@media (max-width:768px){
-
-    .preguntas-frecuentes{
-
-        width:100%;
-
-    }
-
-    .preguntas-frecuentes .dato{
-
-        padding:18px;
-
-        margin-bottom:18px;
-
-    }
-
-    .preguntas-frecuentes .dato h4{
-
-        font-size:18px;
-
-        line-height:1.4;
-
-        margin-bottom:10px;
-
-    }
-
-    .preguntas-frecuentes .dato p{
-
-        font-size:15px;
-
-        line-height:1.8;
-
-    }
-
-}
-
-@media (max-width:480px){
-
-    .preguntas-frecuentes .dato{
-
-        padding:15px;
-
-        border-radius:12px;
-
-    }
-
-    .preguntas-frecuentes .dato h4{
-
-        font-size:16px;
-
-    }
-
-    .preguntas-frecuentes .dato p{
-
-        font-size:14px;
-
-        line-height:1.7;
-
-    }
-
-}
-/*==================================
-PREGUNTAS FRECUENTES
-==================================*/
-
-.preguntas-frecuentes{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
-    padding:30px;
-
-}
-
-.preguntas-frecuentes .dato{
-
-    display:block;
-
-    background:#fff;
-
-    border-left:5px solid #0b5ed7;
-
-    border-radius:12px;
-
-    padding:22px;
-
-    margin:0;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border:1px solid #e5eefc;
 
     transition:.35s;
 
 }
 
-.preguntas-frecuentes .dato:hover{
+.dato:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
+    background:#ffffff;
+
+    box-shadow:0 15px 35px rgba(11,94,215,.10);
 
 }
 
-.preguntas-frecuentes .dato h4{
+/*====================================
+ICONO
+====================================*/
 
-    display:block;
+.icono{
 
-    margin:0 0 12px;
+    width:60px;
+
+    min-width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#0b5ed7;
+
+    color:#fff;
+
+    font-size:28px;
+
+    border-radius:50%;
+
+    box-shadow:0 10px 25px rgba(11,94,215,.25);
+
+}
+
+/*====================================
+TEXTOS
+====================================*/
+
+.dato h4{
+
+    margin:0 0 8px;
 
     color:#0b4f8a;
 
@@ -561,6 +286,94 @@ PREGUNTAS FRECUENTES
 
 }
 
+.dato p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}/*====================================
+PREGUNTAS FRECUENTES
+====================================*/
+
+.preguntas-frecuentes{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    padding:35px;
+
+}
+
+/*====================================
+TARJETAS
+====================================*/
+
+.preguntas-frecuentes .dato{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:28px 30px;
+
+    background:#f8fbff;
+
+    border-left:6px solid #0b5ed7;
+
+    border-radius:18px;
+
+    border:1px solid #e4eefc;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.preguntas-frecuentes .dato:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(11,94,215,.12);
+
+}
+
+/*====================================
+PREGUNTA
+====================================*/
+
+.preguntas-frecuentes .dato h4{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#0b4f8a;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+/*====================================
+RESPUESTA
+====================================*/
+
 .preguntas-frecuentes .dato p{
 
     margin:0;
@@ -569,53 +382,59 @@ PREGUNTAS FRECUENTES
 
     font-size:17px;
 
-    line-height:1.8;
+    line-height:1.9;
 
 }
 
-/*==================================
-RESPONSIVE
-==================================*/
+/*====================================
+TABLET
+====================================*/
 
-@media(max-width:768px){
+@media(max-width:900px){
 
     .preguntas-frecuentes{
+
+        padding:25px;
+
+    }
+
+    .preguntas-frecuentes .dato{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
 
         padding:22px;
 
     }
 
-    .preguntas-frecuentes .dato{
-
-        padding:18px;
-
-    }
-
     .preguntas-frecuentes .dato h4{
 
-        font-size:18px;
-
-    }
-
-    .preguntas-frecuentes .dato p{
-
-        font-size:15px;
+        font-size:19px;
 
     }
 
 }
 
-@media(max-width:480px){
+/*====================================
+MÓVIL
+====================================*/
+
+@media(max-width:600px){
 
     .preguntas-frecuentes{
 
         padding:18px;
 
+        gap:18px;
+
     }
 
     .preguntas-frecuentes .dato{
 
-        padding:16px;
+        padding:18px;
+
+        border-radius:14px;
 
     }
 
@@ -629,9 +448,317 @@ RESPONSIVE
 
     .preguntas-frecuentes .dato p{
 
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/*====================================
+MÓVILES PEQUEÑOS
+====================================*/
+
+@media(max-width:380px){
+
+    .preguntas-frecuentes .dato{
+
+        padding:16px;
+
+    }
+
+    .preguntas-frecuentes .dato h4{
+
+        font-size:16px;
+
+    }
+
+    .preguntas-frecuentes .dato p{
+
         font-size:14px;
 
+    }
+
+}/*====================================
+TABLET
+====================================*/
+
+@media(max-width:992px){
+
+    .info{
+
+        padding:70px 20px;
+
+    }
+
+    .titulo-info{
+
+        font-size:36px;
+
+        margin-bottom:50px;
+
+    }
+
+    .acordeon-btn{
+
+        font-size:20px;
+
+        padding:20px 24px;
+
+    }
+
+    .acordeon-contenido ul{
+
+        padding:28px;
+
+    }
+
+    .ubicacion-info{
+
+        grid-template-columns:1fr;
+
+        padding:28px;
+
+    }
+
+}
+
+/*====================================
+MÓVIL
+====================================*/
+
+@media(max-width:768px){
+
+    .info{
+
+        padding:60px 16px;
+
+    }
+
+    .titulo-info{
+
+        font-size:30px;
+
+        margin-bottom:40px;
+
+    }
+
+    .acordeon{
+
+        border-radius:15px;
+
+    }
+
+    .acordeon-btn{
+
+        padding:18px;
+
+        font-size:18px;
+
+    }
+
+    .acordeon-btn span{
+
+        font-size:28px;
+
+    }
+
+    .acordeon-contenido ul{
+
+        padding:22px;
+
+    }
+
+    .acordeon-contenido li{
+
+        font-size:16px;
+
+    }
+
+    .ubicacion-info{
+
+        padding:22px;
+
+        gap:18px;
+
+    }
+
+    .dato{
+
+        padding:18px;
+
+    }
+
+    .icono{
+
+        width:50px;
+
+        min-width:50px;
+
+        height:50px;
+
+        font-size:24px;
+
+    }
+
+    .dato h4{
+
+        font-size:18px;
+
+    }
+
+    .dato p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*====================================
+MÓVIL PEQUEÑO
+====================================*/
+
+@media(max-width:480px){
+
+    .info{
+
+        padding:50px 15px;
+
+    }
+
+    .titulo-info{
+
+        font-size:26px;
+
+    }
+
+    .titulo-info::after{
+
+        width:70px;
+
+    }
+
+    .acordeon-btn{
+
+        font-size:16px;
+
+        padding:16px;
+
+    }
+
+    .acordeon-btn span{
+
+        font-size:24px;
+
+    }
+
+    .acordeon-contenido ul{
+
+        padding:18px;
+
+    }
+
+    .acordeon-contenido li{
+
+        font-size:15px;
+
         line-height:1.7;
+
+    }
+
+    .ubicacion-info{
+
+        padding:18px;
+
+    }
+
+    .dato{
+
+        gap:14px;
+
+        padding:16px;
+
+        border-radius:14px;
+
+    }
+
+    .icono{
+
+        width:42px;
+
+        min-width:42px;
+
+        height:42px;
+
+        font-size:20px;
+
+    }
+
+    .dato h4{
+
+        font-size:17px;
+
+    }
+
+    .dato p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+}
+
+/*====================================
+MÓVILES MUY PEQUEÑOS
+====================================*/
+
+@media(max-width:340px){
+
+    .titulo-info{
+
+        font-size:22px;
+
+    }
+
+    .acordeon-btn{
+
+        font-size:15px;
+
+        padding:15px;
+
+    }
+
+    .acordeon-btn span{
+
+        font-size:22px;
+
+    }
+
+    .icono{
+
+        width:38px;
+
+        min-width:38px;
+
+        height:38px;
+
+        font-size:18px;
+
+    }
+
+    .dato h4{
+
+        font-size:16px;
+
+    }
+
+    .dato p{
+
+        font-size:13px;
 
     }
 
